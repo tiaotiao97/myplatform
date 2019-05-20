@@ -6,21 +6,22 @@
     ③目前poc处于“用完就删”的状态，不利于管理。它们并不是一次性用完就可以扔掉了，后续复测、统计也需要。
    
 
-#20190520
+20190520提交
+
 在这个520的日子，别人在秀恩爱，我却在提交一行代码 :)
 
 写了一个csrf测试小平台，功能如下：
 1、根据csrf-url和csrf-params生成csrf-form表单。可选form-method为get和post
-#页面入口地址：/csrf/index
-#生成csrf_poc的接口地址：/csrf/createpoc
+页面入口地址：/csrf/index
+生成csrf_poc的接口地址：/csrf/createpoc
 
 2、查看当前平台上生成的所有csrf_poc
-#页面入口地址：/csrf/pocs/allpocs
-#查看某个具体的poc：/csrf/pocs/<poc_name>
+页面入口地址：/csrf/pocs/allpocs
+查看某个具体的poc：/csrf/pocs/<poc_name>
 
 3、给某个poc重命名
-#页面入口地址：/csrf/pocs/allpocs
-#重命名接口：/csrf/renamepoc
+页面入口地址：/csrf/pocs/allpocs
+重命名接口：/csrf/renamepoc
 
 Todo：
 1、删除某个Poc
