@@ -1,0 +1,25 @@
+
+
+<html>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        function rename(poc){
+            var newFileName = prompt("重命名为:(不加html后缀)");
+            $.ajax({
+                url:"/csrf/renamepoc",
+                data:{"old":poc,"new":newFileName},
+                method:"GET",
+                success:function(data){
+                    alert(data);
+                    window.location.reload();
+                }
+
+            });
+        }
+
+    </script>
+    {% for poc in filenames %}
+    <p><a href="/csrf/pocs/{{poc}}">{{poc}}</a> <button onclick="rename('{{poc}}')">重命名该文件</button> </p>
+    {% endfor %}
+
+</html>
