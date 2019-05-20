@@ -3,11 +3,11 @@
 
 2、在漏洞审核过程中，存在几个问题。这个list不断更新中，
 
-    ①白帽子提供了csrf_poc，审核人员需要复制poc到html文件，较为繁琐。
+    * 白帽子提供了csrf_poc，审核人员需要复制poc到html文件，较为繁琐。
     
-    ②白帽子没有提供csrf_poc，只提供了csrf的action和参数，需要手动生成poc。
+    * 白帽子没有提供csrf_poc，只提供了csrf的action和参数，需要手动生成poc。
     
-    ③目前poc处于“用完就删”的状态，不利于管理。它们并不是一次性用完就可以扔掉了，后续复测、统计也需要。
+    * 目前poc处于“用完就删”的状态，不利于管理。它们并不是一次性用完就可以扔掉了，后续复测、统计也需要。
     
    
 
@@ -17,16 +17,16 @@
 
 写了一个csrf测试小平台，功能如下：  
 * 根据csrf-url和csrf-params生成csrf-form表单。可选form-method为get和post  
-页面入口地址：/csrf/index  
-生成csrf_poc的接口地址：/csrf/createpoc  
+    * 页面入口地址：/csrf/index  
+    * 生成csrf_poc的接口地址：/csrf/createpoc  
 
 * 查看当前平台上生成的所有csrf_poc  
-页面入口地址：/csrf/pocs/allpocs  
-查看某个具体的poc：/csrf/pocs/<poc_name>  
+    * 页面入口地址：/csrf/pocs/allpocs  
+    * 查看某个具体的poc：/csrf/pocs/<poc_name>  
 
 * 给某个poc重命名  
-页面入口地址：/csrf/pocs/allpocs  
-重命名接口：/csrf/renamepoc  
+    * 页面入口地址：/csrf/pocs/allpocs  
+    * 重命名接口：/csrf/renamepoc  
 
 ## Todo：  
 * 删除某个Poc  
